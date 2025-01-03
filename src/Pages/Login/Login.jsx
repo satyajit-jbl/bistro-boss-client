@@ -16,6 +16,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const from = location.state?.from?.pathname || "/";
+    console.log('state in the location of login page', location.state);
 
     useEffect(() => {
         loadCaptchaEnginge(6)
@@ -95,12 +96,13 @@ const Login = () => {
                                 <label className="label">
                                     <LoadCanvasTemplate />
                                 </label>
-                                <input onBlur={handleValidateCaptcha} type="text"  name="caltcha" placeholder="Type the text above" className="input input-bordered" required />
+                                <input onBlur={handleValidateCaptcha} type="text"  name="caltcha" placeholder="Type the text above" className="input input-bordered" />
                                 
                             </div>
                             <div className="form-control mt-6">
-
-                                <input disabled={disabled} className="btn btn-primary" type="submit" value="Login" />
+                                    {/* TO DO : APPLY disabled for catcha */}
+                                {/* <input disabled={disabled} className="btn btn-primary" type="submit" value="Login" /> */}
+                                <input disabled={false} className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>
                         <p><small>New Here ?<Link to="/signup"> Create an Account</Link></small></p>

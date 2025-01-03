@@ -3,7 +3,7 @@ import orderCover from '../../../assets/shop/banner2.jpg'
 import Cover from '../../Shared/Cover/Cover';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import useMenu from '../../../hoohs/useMenu';
+import useMenu from '../../../hooks/useMenu';
 import FoodCard from '../../../components/FoodCard/FoodCard';
 import OrderTab from '../OrderTab/OrderTab';
 import { useParams } from 'react-router-dom';
