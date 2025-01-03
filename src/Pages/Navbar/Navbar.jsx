@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+        .then(()=>{
+
+        })
+        .catch(error=>console.log(error));
+    }
 
     const navOptions = <>
-        <li><a>Home</a></li>
-        <li>
-            <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                </ul>
-            </details>
-        </li>
-        <li><a>Item 3</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/menu">Our Menu</Link></li>
+        <li><Link to="/order/salad">Order Food</Link></li>
+        <li><Link to="/secret">Secret</Link></li>
+
+        {
+            user ? <>
+                <button onClick={handleLogOut} className='btn btn-ghost'>Log Out</button>
+            </> : <>
+                <li><Link to="/login">Login</Link></li>
+            </>
+        }
     </>
+
     return (
         <>
             <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl mx-auto">
@@ -37,7 +50,7 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                                {navOptions}
+                            {navOptions}
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">Bistro Boss</a>
