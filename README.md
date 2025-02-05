@@ -1,7 +1,7 @@
 # Bistro Boss Client
 
 Bistro Boss is a restaurant management web application that allows users to browse the menu, place orders, and manage their cart efficiently.
-![Image](https://github.com/user-attachments/assets/e2fb6046-bc7a-475a-8978-fc2903bfbdb5)
+![Image](https://github.com/user-attachments/assets/905e9bc0-760d-4433-91dc-f320e605bcce)
 
 ## 🚀 Features
 
