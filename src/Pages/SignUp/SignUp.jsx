@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../providers/AuthProvider';
+// import { AuthContext } from '../../providers/AuthProvider';
 import { Result } from 'postcss';
 import Swal from 'sweetalert2';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 import SocialLogin from '../../components/SocialLogin/SocialLogin';
+import { AuthContext } from '../../providers/AuthProvider';
 
 
 
